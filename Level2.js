@@ -156,17 +156,17 @@ class Level2 extends Phaser.Scene {
             .sprite(645, 215, "idlecoin")
             .setImmovable(true);
         coin1.body.setAllowGravity(false);
-        coin1.setScale(0.6);
+        coin1.setScale(0.1);
 
         coin2 = this.physics.add.sprite(1068, 0, "idlecoin").setImmovable(true);
         coin2.body.setAllowGravity(false);
-        coin2.setScale(0.6);
+        coin2.setScale(0.1);
 
         coin3 = this.physics.add
             .sprite(1550, 100, "idlecoin")
             .setImmovable(true);
         coin3.body.setAllowGravity(false);
-        coin3.setScale(0.6);
+        coin3.setScale(0.1);
 
         //text
         score = this.add.text(0, 0, `Coins: 0`, {

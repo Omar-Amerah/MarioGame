@@ -57,8 +57,7 @@ localStorage.removeItem('Deaths')
 
 class Level1 extends Phaser.Scene {
     constructor() {
-        super("firstLevel");
-        
+        super("firstLevel");     
     }
     preload() {
         //load sprites
@@ -69,10 +68,10 @@ class Level1 extends Phaser.Scene {
             frameHeight: 64 
         })
         this.load.spritesheet("idlecoin", "./assets/coin.png", {
-            frameWidth: 16,
-            frameHeight: 16 
+            frameWidth: 120,
+            frameHeight: 120 
         })
-        this.load.spritesheet("idle", "./assets/Char.png", {
+        this.load.spritesheet("idle", "/assets/Char.png", {
             frameWidth: 24,
             frameHeight: 24,
         });
@@ -110,15 +109,15 @@ class Level1 extends Phaser.Scene {
 
         coin1 = this.physics.add.sprite(150, 65, 'idlecoin').setImmovable(true)
         coin1.body.setAllowGravity(false);
-        coin1.setScale(0.6)
+        coin1.setScale(0.1)
     
         coin2 = this.physics.add.sprite(880, 35, 'idlecoin').setImmovable(true)
         coin2.body.setAllowGravity(false);
-        coin2.setScale(0.6)
+        coin2.setScale(0.1)
     
         coin3 = this.physics.add.sprite(1369, -10, 'idlecoin').setImmovable(true)
         coin3.body.setAllowGravity(false);
-        coin3.setScale(0.6)
+        coin3.setScale(0.1)
 
         //text
         score = this.add.text(0,0, `Coins: 0`, { fontSize: '8px', fill: '#FFFFFF' })
